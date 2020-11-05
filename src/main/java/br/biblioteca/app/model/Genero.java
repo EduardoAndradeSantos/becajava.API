@@ -6,12 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Categoria {
-
+public class Genero {
+	
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	public Long Id;
-	public String Nome;
+	private Long Id;
+	private String Tipo;
+	
 	
 	
 	public Long getId() {
@@ -20,14 +21,11 @@ public class Categoria {
 	public void setId(Long id) {
 		Id = id;
 	}
-	public String getNome() {
-		return Nome;
+	public String getTipo() {
+		return Tipo;
 	}
-	public void setNome(String nome) {
-		Nome = nome;
+	public void setTipo(String tipo) {
+		Tipo = tipo;
 	}
-
+	
 }
-
-
-

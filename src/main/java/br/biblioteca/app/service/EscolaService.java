@@ -10,43 +10,41 @@ import br.biblioteca.app.model.*;
 import br.biblioteca.app.repository.*;
 
 @Service
-public class AlunoService {
-
-	final AlunoRepository _repository;
+public class EscolaService {
+	
+	final EscolaRepository _repository;
 
 	// @Autowired
-	public AlunoService(AlunoRepository repository) {
+	public EscolaService(EscolaRepository repository) {
 		_repository = repository;
 	}
 
 	// Inserir
-	public void criar(Aluno aluno) {
-
-		aluno.setId(new Long(0));
-		_repository.save(aluno);
+	public void criar(Escola escola) {
+		escola.setId(new Long(0));
+		_repository.save(escola);
 	}
 
 	// Listar Todos
-	public List<Aluno> listar() {
+	public List<Escola> listar() {
 		return _repository.findAll();
-
 	}
 
 	// Listar Somente Um
-	public Optional<Aluno> listar(Long id) {
+	public Optional<Escola> listar(Long id) {
 		return _repository.findById(id);
 
 	}
-		//Atualizar dados
-	public void atualizar(Aluno aluno, Long id) {
-		
-		
-		aluno.setId(id);
-		_repository.save(aluno);
+
+	// Atualizar dados
+	public void atualizar(Escola escola, Long id) {
+		escola.setId(id);
+		_repository.save(escola);
 	}
-		//Deletar Dados
-	public void deletar (Long id) {
+
+	// Deletar Dados
+	public void deletar(Long id) {
 		_repository.deleteById(id);
 	}
-	
+
 }

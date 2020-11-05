@@ -12,40 +12,42 @@ public class Requisicao {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	public Long id_requisicao;
+	public Long Id;
 	
 	@ManyToOne
-	@JoinColumn (name ="id_aluno")
-	private Aluno aluno;
+	@JoinColumn (name ="Id_aluno")
+	private Aluno Aluno;
 	
 	@ManyToOne
-	@JoinColumn (name ="id_livro")
-	private Livro livro;
+	@JoinColumn (name ="Id_livro")
+	private Livro Livro;
+	
+	
+	
+	
 
-	public Long getId_requisicao() {
-		return id_requisicao;
+	public Long getId() {
+		return Id;
 	}
 
-	public void setId_requisicao(Long id_requisicao) {
-		this.id_requisicao = id_requisicao;
+	public void setId(Long id) {
+		Id = id;
 	}
 
 	public Aluno getAluno() {
-		return aluno;
+		return Aluno;
 	}
 
 	public void setAluno(Aluno aluno) {
-		this.aluno = aluno;
+		Aluno = aluno;
 	}
 
 	public Livro getLivro() {
-		return livro;
+		return Livro;
 	}
 
 	public void setLivro(Livro livro) {
-		this.livro = livro;
+		Livro = livro;
 	}
-	
-	
 	
 }

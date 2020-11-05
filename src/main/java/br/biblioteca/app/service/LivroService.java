@@ -3,9 +3,12 @@ package br.biblioteca.app.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import br.biblioteca.app.model.Livro;
 import br.biblioteca.app.repository.LivroRepository;
 
+@Service
 public class LivroService {
 
 	final LivroRepository _repository;
@@ -18,7 +21,7 @@ public class LivroService {
 	// Inserir
 	public void criar(Livro livro) {
 
-		livro.setId_livro(new Long(0));
+		livro.setId(new Long(0));
 		_repository.save(livro);
 	}
 
@@ -37,7 +40,7 @@ public class LivroService {
 	// Atualizar dados
 	public void atualizar(Livro livro, Long id) {
 
-		livro.setId_livro(id);
+		livro.setId(id);
 		_repository.save(livro);
 	}
 

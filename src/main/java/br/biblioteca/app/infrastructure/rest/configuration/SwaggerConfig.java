@@ -1,4 +1,4 @@
-package br.bliblioteca.app.infrastructure.rest.configuration;
+package br.biblioteca.app.infrastructure.rest.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

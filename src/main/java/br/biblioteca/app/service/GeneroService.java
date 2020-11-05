@@ -10,43 +10,41 @@ import br.biblioteca.app.model.*;
 import br.biblioteca.app.repository.*;
 
 @Service
-public class AlunoService {
+public class GeneroService {
 
-	final AlunoRepository _repository;
+	final GeneroRepository _repository;
 
 	// @Autowired
-	public AlunoService(AlunoRepository repository) {
+	public GeneroService(GeneroRepository repository) {
 		_repository = repository;
 	}
 
 	// Inserir
-	public void criar(Aluno aluno) {
-
-		aluno.setId(new Long(0));
-		_repository.save(aluno);
+	public void criar(Genero genero) {
+		genero.setId(new Long(0));
+		_repository.save(genero);
 	}
 
 	// Listar Todos
-	public List<Aluno> listar() {
+	public List<Genero> listar() {
 		return _repository.findAll();
-
 	}
 
 	// Listar Somente Um
-	public Optional<Aluno> listar(Long id) {
+	public Optional<Genero> listar(Long id) {
 		return _repository.findById(id);
 
 	}
-		//Atualizar dados
-	public void atualizar(Aluno aluno, Long id) {
-		
-		
-		aluno.setId(id);
-		_repository.save(aluno);
+
+	// Atualizar dados
+	public void atualizar(Genero genero, Long id) {
+		genero.setId(id);
+		_repository.save(genero);
 	}
-		//Deletar Dados
-	public void deletar (Long id) {
+
+	// Deletar Dados
+	public void deletar(Long id) {
 		_repository.deleteById(id);
 	}
-	
+
 }

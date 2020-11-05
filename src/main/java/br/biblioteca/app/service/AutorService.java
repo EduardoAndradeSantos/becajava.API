@@ -23,7 +23,7 @@ public class AutorService {
 	// Inserir
 	public void criar(Autor autor) {
 
-		autor.setId_autor(new Long(0));
+		autor.setId(new Long(0));
 		_repository.save(autor);
 	}
 
@@ -42,7 +42,7 @@ public class AutorService {
 	// Atualizar dados
 	public void atualizar(Autor autor, Long id) {
 
-		autor.setId_autor(id);
+		autor.setId(id);
 		_repository.save(autor);
 	}
 

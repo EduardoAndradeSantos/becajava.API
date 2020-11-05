@@ -21,7 +21,7 @@ public class CategoriaService {
 	// Inserir
 	public void criar(Categoria categoria) {
 
-		categoria.setId_categoria(new Long(0));
+		categoria.setId(new Long(0));
 		_repository.save(categoria);
 	}
 
@@ -40,7 +40,7 @@ public class CategoriaService {
 	// Atualizar dados
 	public void atualizar(Categoria categoria, Long id) {
 
-		categoria.setId_categoria(id);
+		categoria.setId(id);
 		_repository.save(categoria);
 	}
 

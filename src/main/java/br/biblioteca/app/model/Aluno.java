@@ -4,35 +4,54 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Aluno {
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	public Long id_aluno;
-	public String Nome_aluno;
-	public String telefone;
+	public Long Id;
+	public String Nome;
+	public String Telefone;
 	
-	public Long getId_aluno() {
-		return id_aluno;
-	}
-	public void setId_aluno(Long id_aluno) {
-		this.id_aluno = id_aluno;
-	}
-	public String getNome_aluno() {
-		return Nome_aluno;
-	}
-	public void setNome_aluno(String nome_aluno) {
-		Nome_aluno = nome_aluno;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	@ManyToOne
+	@JoinColumn (name ="Id_escola")
+	private Escola Escola;
+	
+	
+
+	public Long getId() {
+		return Id;
 	}
 
-	
+	public void setId(Long id) {
+		Id = id;
+	}
+
+	public String getNome() {
+		return Nome;
+	}
+
+	public void setNome(String nome) {
+		Nome = nome;
+	}
+
+	public String getTelefone() {
+		return Telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		Telefone = telefone;
+	}
+
+	public Escola getEscola() {
+		return Escola;
+	}
+
+	public void setEscola(Escola escola) {
+		Escola = escola;
+	}
 	
 }
