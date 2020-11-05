@@ -37,16 +37,17 @@ public class AlunoService {
 		return _repository.findById(id);
 
 	}
-		//Atualizar dados
+
+	// Atualizar dados
 	public void atualizar(Aluno aluno, Long id) {
-		
-		
+
 		aluno.setId(id);
 		_repository.save(aluno);
 	}
-		//Deletar Dados
-	public void deletar (Long id) {
+
+	// Deletar Dados
+	public void deletar(Long id) {
 		_repository.deleteById(id);
 	}
-	
+
 }

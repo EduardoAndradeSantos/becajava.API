@@ -11,7 +11,7 @@ import br.biblioteca.app.repository.*;
 
 @Service
 public class EscolaService {
-	
+
 	final EscolaRepository _repository;
 
 	// @Autowired

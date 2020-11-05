@@ -9,18 +9,16 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Aluno {
-	
+
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long Id;
 	public String Nome;
 	public String Telefone;
-	
+
 	@ManyToOne
-	@JoinColumn (name ="Id_escola")
+	@JoinColumn(name = "Id_escola")
 	private Escola Escola;
-	
-	
 
 	public Long getId() {
 		return Id;
@@ -53,5 +51,5 @@ public class Aluno {
 	public void setEscola(Escola escola) {
 		Escola = escola;
 	}
-	
+
 }

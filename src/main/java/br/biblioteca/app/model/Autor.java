@@ -9,18 +9,16 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Autor {
-	
+
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	public Long Id; 
-    public String Nome;
-    
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Long Id;
+	public String Nome;
+
 	@ManyToOne
-	@JoinColumn (name ="Id_genero")
+	@JoinColumn(name = "Id_genero")
 	private Genero Genero;
 
-	
-	
 	public Long getId() {
 		return Id;
 	}
@@ -44,5 +42,5 @@ public class Autor {
 	public void setGenero(Genero genero) {
 		Genero = genero;
 	}
-      
+
 }

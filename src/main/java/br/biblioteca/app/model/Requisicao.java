@@ -11,20 +11,16 @@ import javax.persistence.ManyToOne;
 public class Requisicao {
 
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long Id;
-	
+
 	@ManyToOne
-	@JoinColumn (name ="Id_aluno")
+	@JoinColumn(name = "Id_aluno")
 	private Aluno Aluno;
-	
+
 	@ManyToOne
-	@JoinColumn (name ="Id_livro")
+	@JoinColumn(name = "Id_livro")
 	private Livro Livro;
-	
-	
-	
-	
 
 	public Long getId() {
 		return Id;
@@ -49,5 +45,5 @@ public class Requisicao {
 	public void setLivro(Livro livro) {
 		Livro = livro;
 	}
-	
+
 }
